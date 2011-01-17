@@ -1,0 +1,23 @@
+.grid_5
+	.bottle_container
+		.bottle_fill{:style => "height:#{percentage_for_today}%;"}
+		
+.grid_7
+	.status
+		%span.today Today,
+		%span.regular you have drank
+		%br
+		.glasses_so_far_today= glasses_so_far_today
+		.percentage out of
+		.glasses_per_day= APP_CONFIG['glasses_per_day']
+		%span.regular glasses of
+		%span.today water
+	.controls
+		= button_to 'Drink a glass', glasses_path, :method => :post, :class => "button"
+		- if @glass
+			%span.delete
+				or
+				= link_to "delete a glass", glass_path(@glass), :method => :delete, :confirm => "Are you sure you want to delete a glass for today?"
+	.history
+		%h2 History
+		= image_tag(generate_history_chart_url)
