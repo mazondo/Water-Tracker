@@ -6,7 +6,7 @@ a {color:#677d99;text-decoration:none;}
 a:hover {text-decoration:underline;}
 
 /* bottle */
-.bottle_container{width:300px;height:623px;position:relative;background:url(../images/empty_bottle.png) no-repeat center bottom;}
+.bottle_container{margin-top:25px;margin-left:25px;width:300px;height:623px;position:relative;background:url(../images/empty_bottle.png) no-repeat center bottom;}
 .bottle_fill {background:url(../images/full_bottle.png) no-repeat center bottom;height:40%;position:absolute;bottom:0;width:100%;}
 
 /* text */
